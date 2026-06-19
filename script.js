@@ -64,11 +64,25 @@ function updateCartCount() {
 function displayCart() {
   const cartItems = document.getElementById("cart-items");
   const cartTotal = document.getElementById("cart-total");
+  const emptyCartMessage = document.getElementById("empty-cart-message");
 
   if (!cartItems || !cartTotal) return;
 
   const cart = getCart();
   cartItems.innerHTML = "";
+
+  if (cart.length === 0) {
+    if (emptyCartMessage) {
+      emptyCartMessage.style.display = "block";
+    }
+
+    cartTotal.textContent = "Total: £0";
+    return;
+  }
+
+  if (emptyCartMessage) {
+    emptyCartMessage.style.display = "none";
+  }
 
   let total = 0;
 
@@ -77,18 +91,19 @@ function displayCart() {
     total += itemTotal;
 
     const li = document.createElement("li");
-  li.innerHTML = `
-  <span>${item.name} - Size: ${item.size} - £${item.price}</span>
+    li.innerHTML = `
+      <span>${item.name} - Size: ${item.size} - £${item.price}</span>
 
-  <div class="quantity-controls">
-    <button onclick="decreaseQuantity('${item.name}', '${item.size}')">-</button>
-    <span>${item.quantity}</span>
-    <button onclick="increaseQuantity('${item.name}', '${item.size}')">+</button>
-    <button onclick="removeFromCart('${item.name}', '${item.size}')">Remove</button>
-  </div>
+      <div class="quantity-controls">
+        <button onclick="decreaseQuantity('${item.name}', '${item.size}')">-</button>
+        <span>${item.quantity}</span>
+        <button onclick="increaseQuantity('${item.name}', '${item.size}')">+</button>
+        <button onclick="removeFromCart('${item.name}', '${item.size}')">Remove</button>
+      </div>
 
-  <strong>£${itemTotal}</strong>
-`;
+      <strong>£${itemTotal}</strong>
+    `;
+
     cartItems.appendChild(li);
   });
 
@@ -151,4 +166,22 @@ function checkout() {
 
 window.clearCart = clearCart;
 window.checkout = checkout;
+}
+const waitlistForm = document.querySelector(".waitlist-form");
+
+if (waitlistForm) {
+  waitlistForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Thanks for joining the Albatross waitlist.");
+    waitlistForm.reset();
+  });
+}
+const waitlistForm = document.querySelector(".waitlist-form");
+
+if (waitlistForm) {
+  waitlistForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Thanks for joining the Albatross waitlist.");
+    waitlistForm.reset();
+  });
 }

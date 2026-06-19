@@ -7,18 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+<div class="announcement-bar">
+  <a href="index.html#waitlist">Summer launch coming soon - join the waitlist for first updates.</a>
+</div>
 <header class="nav">
   <h1>ALBATROSS</h1>
 <nav>
   <a href="index.html">Home</a>
-  <a href="shop.html">Shop</a>
+  <a href="shop.html" class="active">Shop</a>
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
   <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
 </nav>
 </header>
-
+<section class="launch-notice">
+  <p class="small-heading">Summer Launch</p>
+  <h2>Albatross is launching soon.</h2>
+  <p>
+    We’re currently developing our first collection of modern golfwear.
+    Product styles, colours, and availability may change before launch.
+  </p>
+</section>
 <section class="shop">
   <h2>Shop Collection</h2>
 
@@ -37,7 +46,22 @@
 </select>
 <button onclick="addToCart('Performance Polo', 'polo-size')">Add to Cart</button>
 </div>
+<div class="shop-info">
+  <div>
+    <h3>Easy Sizing</h3>
+    <p>Simple size options to help you find the right fit.</p>
+  </div>
 
+  <div>
+    <h3>Summer Golfwear</h3>
+    <p>Designed for comfort, movement, and warm-weather rounds.</p>
+  </div>
+
+  <div>
+    <h3>Launch Updates</h3>
+    <p>More products and colours coming as Albatross grows.</p>
+  </div>
+</div>
 <div class="card">
   <div class="img cap-img"></div>
   <h3>Albatross Cap</h3>
@@ -68,7 +92,26 @@
 <button onclick="addToCart('Golf Trousers', 'trousers-size')">Add to Cart</button>
   </div>
 </section>
+<footer class="footer">
+  <div>
+    <h2>ALBATROSS</h2>
+    <p>Modern golfwear for the next generation of the game.</p>
+  </div>
 
+  <div>
+    <h3>Pages</h3>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div>
+    <h3>Contact</h3>
+    <p>Email coming soon</p>
+    <p>Instagram coming soon</p>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

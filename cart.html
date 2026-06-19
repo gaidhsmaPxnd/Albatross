@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+<div class="announcement-bar">
+  <a href="index.html#waitlist">Summer launch coming soon - join the waitlist for first updates.</a>
+</div>
 <header class="nav">
   <h1>ALBATROSS</h1>
   <nav>
@@ -21,14 +23,37 @@
 
 <section class="cart-page">
   <h1>Your Cart</h1>
+
+  <p id="empty-cart-message">Your cart is currently empty.</p>
+
   <ul id="cart-items"></ul>
   <h2 id="cart-total">Total: £0</h2>
-  <div class="cart-actions">
-  <button onclick="clearCart()">Clear Cart</button>
-  <button onclick="checkout()">Checkout</button>
-</div>
-</section>
 
+  <div class="cart-actions">
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+</section>
+<footer class="footer">
+  <div>
+    <h2>ALBATROSS</h2>
+    <p>Modern golfwear for the next generation of the game.</p>
+  </div>
+
+  <div>
+    <h3>Pages</h3>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div>
+    <h3>Contact</h3>
+    <p>Email coming soon</p>
+    <p>Instagram coming soon</p>
+  </div>
+</footer>
 <script src="script.js"></script>
 
 </body>
