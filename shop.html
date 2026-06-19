@@ -4,46 +4,68 @@
   <meta charset="UTF-8">
   <title>Shop | Albatross</title>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 <header class="nav">
   <h1>ALBATROSS</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="#">Cart (<span id="cart-count">0</span>)</a>
-  </nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="shop.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+</nav>
 </header>
 
 <section class="shop">
   <h2>Shop Collection</h2>
 
-  <div class="grid">
+  <div class="card">
+  <div class="img polo-img"></div>
+  <h3>Performance Polo</h3>
+  <p class="description">Lightweight golf polo built for comfort and movement.</p>
+  <p class="price">£45</p>
 
-    <div class="card">
-      <div class="img"></div>
-      <h3>Performance Polo</h3>
-      <p>£45</p>
-      <button onclick="addToCart('Performance Polo')">Add to Cart</button>
-    </div>
+  <select id="polo-size">
+  <option value="">Select Size</option>
+  <option>Small</option>
+  <option>Medium</option>
+  <option>Large</option>
+  <option>XL</option>
+</select>
+<button onclick="addToCart('Performance Polo', 'polo-size')">Add to Cart</button>
+</div>
 
-    <div class="card">
-      <div class="img"></div>
-      <h3>Albatross Cap</h3>
-      <p>£25</p>
-      <button onclick="addToCart('Albatross Cap')">Add to Cart</button>
-    </div>
+<div class="card">
+  <div class="img cap-img"></div>
+  <h3>Albatross Cap</h3>
+  <p class="description">Classic golf cap with a clean everyday fit.</p>
+  <p class="price">£25</p>
+<select id="cap-size">
+  <option value="">Select Size</option>
+  <option>One Size</option>
+</select>
+<button onclick="addToCart('Albatross Cap', 'cap-size')">Add to Cart</button>
 
-    <div class="card">
-      <div class="img"></div>
-      <h3>Golf Trousers</h3>
-      <p>£60</p>
-      <button onclick="addToCart('Golf Trousers')">Add to Cart</button>
-    </div>
+</div>
 
+<div class="card">
+  <div class="img trousers-img"></div>
+  <h3>Golf Trousers</h3>
+  <p class="description">Smart performance trousers for course and clubhouse.</p>
+  <p class="price">£60</p>
+
+<select id="trousers-size">
+  <option value="">Select Size</option>
+  <option>30</option>
+  <option>32</option>
+  <option>34</option>
+  <option>36</option>
+</select>
+
+<button onclick="addToCart('Golf Trousers', 'trousers-size')">Add to Cart</button>
   </div>
 </section>
 
